@@ -24,5 +24,5 @@ A lightweight chatbot UI powered by Google's Gemini 2.0 Flash model. Built using
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/yourusername/gemini-chatbot.git
+git clone https://github.com/Maleedew/md_bot-v5.git
 cd gemini-chatbot
