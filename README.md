@@ -5,7 +5,7 @@ A lightweight chatbot UI powered by Google's Gemini 2.0 Flash model. Built using
 
 ## 🧠 Features
 
-- 🔹 **Text chat** with Gemini 2.0 Flash model (via API)
+- 🔹 **Text chat**
 - ✍️ **Typing animation** while bot responds
 - 🖼️ **Image generation** support via prompt (URL-based output)
 - 🎥 **Video simulation** support (Veo3-style prompts)
