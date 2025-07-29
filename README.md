@@ -25,4 +25,3 @@ https://maleedew.github.io/md_bot-v5/
 
 ```bash
 git clone https://github.com/Maleedew/md_bot-v5.git
-cd gemini-chatbot
