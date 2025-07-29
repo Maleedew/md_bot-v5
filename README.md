@@ -15,7 +15,7 @@ A lightweight chatbot UI powered by Google's Gemini 2.0 Flash model. Built using
 
 ## 🖼️ Live Preview
 
-> 🔗 Add your GitHub Pages link here if you deploy it
+https://maleedew.github.io/md_bot-v5/
 
 ---
 
