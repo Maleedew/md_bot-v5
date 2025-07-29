@@ -1,3 +1,5 @@
+<h1>MALEESHA DEWSHAN</h1>
+
 
 A lightweight chatbot UI powered by Google's Gemini 2.0 Flash model. Built using plain HTML, CSS, and JavaScript — no frameworks required!
 
