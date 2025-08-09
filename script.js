@@ -21,8 +21,42 @@ function showMessage(text, sender, isImageOrVideo = false) {
   chatBox.scrollTop = chatBox.scrollHeight;
 }
 
+// --- Preset responses ---
+function checkPresetResponses(message) {
+  const lowerMsg = message.toLowerCase().trim();
+
+  // Sinhala & English variations
+  if (
+    lowerMsg.includes("ඔයාව හැදුවෙ මොකක්ද") ||
+    lowerMsg.includes("ඔයාව හැදුවේ කවුද") ||
+    lowerMsg.includes("who created you") ||
+    lowerMsg.includes("your creator") ||
+    lowerMsg.includes("developer name")
+  ) {
+    return "මාව හැදුවේ මලීශ 😎 (Maleesha)";
+  }
+
+  if (
+    lowerMsg.includes("මලීශ කියන්නෙ කවුද") ||
+    lowerMsg.includes("who is maleesha") ||
+    lowerMsg.includes("maleesha who") ||
+    lowerMsg.includes("about maleesha")
+  ) {
+    return "ඔව්, මම Maleeshaව දන්නවා 😊. හැබැයි ඔහු ගැන විස්තර කියන්න මට අවසර නෑ 🙊.";
+  }
+
+  return null; // No preset match
+}
+
 async function sendMessage(message) {
   showMessage(message, "user");
+
+  // --- Check preset answers first ---
+  const presetReply = checkPresetResponses(message);
+  if (presetReply) {
+    showMessage(presetReply, "bot");
+    return;
+  }
 
   // Typing animation
   const typingDiv = document.createElement("div");
@@ -65,7 +99,12 @@ async function sendMessage(message) {
     document.getElementById("typing").remove();
 
     // Check for image/video prompts
-    if (reply.startsWith("https://") && (reply.endsWith(".jpg") || reply.endsWith(".png") || reply.endsWith(".mp4"))) {
+    if (
+      reply.startsWith("https://") &&
+      (reply.endsWith(".jpg") ||
+        reply.endsWith(".png") ||
+        reply.endsWith(".mp4"))
+    ) {
       showMessage(reply, "bot", true);
     } else {
       showMessage(reply, "bot");
